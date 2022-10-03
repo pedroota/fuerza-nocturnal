@@ -1,0 +1,47 @@
+@use "./functions" as function;
+@use "./variables";
+
+@mixin fluid-size() {
+  font-size: calc(0.875rem + (26 - 14) * ((100vw - 18.75rem) / (1600 - 300)));
+}
+
+@mixin flex($align, $justify, $gap) {
+  align-items: $align;
+  display: flex;
+  gap: function.torem($gap);
+  justify-content: $justify;
+}
+
+// Completely remove the default button appearance.
+@mixin remove-button-appearance() {
+  appearance: none;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  outline: inherit;
+  padding: 0;
+
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Responsive mixin
+@mixin breakpoint($value) {
+  // If the key exists in the map
+  @if map-has-key(variables.$breakpoints, $value) {
+    // Prints a media query based on the value
+    @media screen and (min-width: map-get(variables.$breakpoints, $value)) {
+      @content;
+    }
+  }
+}
+
+// Center div on the screen (the container element should be relative position)
+@mixin center() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

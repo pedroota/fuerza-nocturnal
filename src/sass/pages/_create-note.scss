@@ -1,0 +1,18 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+
+.create-note {
+  @include mixin.flex(flex-start, center, 40);
+  flex-direction: column;
+  margin-block: function.torem(30);
+
+  &__header {
+    @include mixin.flex(center, flex-start, 15);
+  }
+
+  > form {
+    width: 100%;
+    @include mixin.flex(center, center, 20);
+    flex-direction: column;
+  }
+}

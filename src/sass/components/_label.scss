@@ -1,0 +1,11 @@
+@use "../abstracts/functions" as function;
+
+.label {
+  font-weight: function.weight("semibold");
+  font-size: function.torem(12);
+  text-align: left;
+
+  &--error {
+    color: function.color("error");
+  }
+}

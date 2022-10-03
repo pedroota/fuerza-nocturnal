@@ -1,0 +1,9 @@
+@use "../abstracts/functions" as function;
+
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: function.torem(10);
+  width: 100%;
+  height: 100%;
+}

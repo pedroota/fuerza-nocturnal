@@ -1,0 +1,29 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html,
+body {
+  @include mixin.fluid-size();
+  font-size: 16px;
+  background-color: function.color("primary");
+  width: 100%;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

@@ -1,0 +1,7 @@
+@use "../abstracts/functions" as function;
+
+.cta {
+  color: function.color("brown-500");
+  font-weight: function.weight("semibold");
+  text-decoration: underline;
+}

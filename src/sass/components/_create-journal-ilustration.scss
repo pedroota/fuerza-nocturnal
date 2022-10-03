@@ -1,0 +1,13 @@
+@use "../abstracts/functions" as function;
+@use "../abstracts/mixins" as mixin;
+
+.create-journal-ilustration {
+  @include mixin.flex(center, center, 0);
+  height: 100%;
+  min-height: function.torem(300);
+  min-width: function.torem(230);
+  padding: function.torem(15);
+  border-radius: function.torem(8);
+  background-color: function.color("primary");
+  box-shadow: 0 0 function.torem(10) rgba(0, 0, 0, 0.300);
+}

@@ -1,0 +1,6 @@
+@use "../abstracts/mixins" as mixin;
+
+.home {
+  @include mixin.center();
+  @include mixin.flex(center, center, 20);
+}

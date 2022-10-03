@@ -1,0 +1,25 @@
+/*
+    Archive for variables
+*/
+
+// Variable Colors for map
+
+$colors: (
+  "primary": #F8E5D6,
+  "brown-500": #834825,
+  "error": #ff0000,
+);
+
+$fontWeight: (
+  "regular": 400,
+  "medium": 500,
+  "semibold": 600,
+  "bold": 700,
+  "extrabold": 800,
+);
+$breakpoints: (
+  "sm": 375px,
+  "md": 768px,
+  "lg": 1220px,
+  "xl": 1440px,
+);

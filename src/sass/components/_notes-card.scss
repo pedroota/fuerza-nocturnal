@@ -1,0 +1,13 @@
+@use "../abstracts/functions" as function;
+
+.notes-card {
+  max-width: function.torem(150);
+  max-height: function.torem(160);
+  min-height: function.torem(160);
+  border-radius: function.torem(4);
+  padding: function.torem(15) function.torem(10);
+  background-color: #FAF2EC;
+  box-shadow: function.torem(-5) function.torem(5) function.torem(20) rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  overflow-wrap: break-word;
+}

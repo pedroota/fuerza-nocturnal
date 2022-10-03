@@ -1,0 +1,13 @@
+@use "../abstracts/functions" as function;
+@use "../abstracts/mixins" as mixin;
+
+.journals {
+  @include mixin.flex(center, flex-start, 0);
+  flex-direction: column;
+
+  &__create-journal {
+    @include mixin.flex(center, center, 40);
+    flex-direction: column;
+    @include mixin.center();
+  }
+}

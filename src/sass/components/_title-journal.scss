@@ -1,0 +1,8 @@
+@use "../abstracts/functions" as function;
+
+.title-journal {
+  font-family: 'Abhaya Libre', serif;
+  font-weight: function.weight("bold");
+  font-size: function.torem(24);
+  line-height: function.torem(28.31);
+}

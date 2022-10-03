@@ -1,0 +1,19 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+
+.create-journal {
+  width: 100%;
+  @include mixin.flex(center, center, 50);
+  @include mixin.center();
+  flex-direction: column;
+  
+  > form {
+    width: 100%;
+    @include mixin.flex(center, center, 20);
+    flex-direction: column;   
+    
+    > button {
+      max-width: function.torem(190);
+    }
+  }
+}

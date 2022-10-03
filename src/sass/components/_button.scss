@@ -1,0 +1,26 @@
+@use "../abstracts/mixins" as mixin;
+@use "../abstracts/functions" as function;
+
+.button {
+  @include mixin.remove-button-appearance();
+  @include mixin.flex(center, center, 10);
+  padding: function.torem(10) function.torem(20);
+  border-radius: function.torem(40);
+  white-space: nowrap;
+  font-weight: function.weight("semibold");
+  font-size: function.torem(14);
+  line-height: function.torem(17.07);
+
+  &--brown {
+    background-color: function.color("brown-500");
+    color: white;
+  }
+
+  &--outlined-brown {
+    max-width: function.torem(135);
+    background-color: transparent;
+    border: function.torem(2) solid function.color("brown-500");
+    color: function.color("brown-500");
+    font-weight: function.weight("medium");
+  }
+}

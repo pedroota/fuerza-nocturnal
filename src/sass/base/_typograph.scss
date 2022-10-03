@@ -1,0 +1,10 @@
+@use "../abstracts/functions" as function;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@700&display=swap');
+
+a {
+  font-weight: function.weight("semibold");
+  font-size: function.torem(12);
+  line-height: function.torem(14.63);
+  color: black;
+}

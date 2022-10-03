@@ -1,0 +1,18 @@
+@use "../abstracts/functions" as function;
+
+.input {
+  width: 100%;
+  border: none;
+  padding: function.torem(13) function.torem(15);
+  border-radius: function.torem(5);
+  font-size: function.torem(12);
+  background-color: white;
+  color: function.color("brown-500");
+  
+  &::placeholder {
+    font-weight: function.weight("semibold");
+    color: function.color("brown-500");
+    font-size: function.torem(12);
+    line-height: function.torem(14.63);
+  }
+}

@@ -1,0 +1,31 @@
+@use "../abstracts/functions" as function;
+@use "../abstracts/mixins" as mixin;
+
+.journal-card {
+  @include mixin.flex(center, center, 0);
+  color: white;
+  min-width: function.torem(100);
+  min-height: function.torem(160);
+  border-bottom-right-radius: function.torem(10);
+  border-top-right-radius: function.torem(10);
+  background-color: #3B4E8D;
+  position: relative;
+  padding-inline: function.torem(10);
+  text-align: center;
+  cursor: pointer;
+
+  &:nth-child(2n + 1) {
+    background-color: #B8E5E3;
+    color: black;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: function.torem(8);
+    height: 100%;
+    background-color: #5091D6;
+    left: 0;
+    top: 0;
+  }
+}
